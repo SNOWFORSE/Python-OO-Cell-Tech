@@ -1,18 +1,18 @@
 class Celular:
-    nome = ''
-    modelo = ''
-    estado = ''
-    ativo = False
+    def __init__(self, nome, modelo, estado):
+        self.nome = nome
+        self.modelo = modelo
+        self.estado = estado
+        self.ativo = False
 
-celular_iPhone = Celular()
-celular_Xiaomi = Celular()
+    def __str__(self):
+        return f'{self.nome} | {self.modelo} | {self.estado} | {self.ativo}'
+celular_iPhone = Celular('iPhone','14 Pro','Novo' )
+celular_Xiaomi = Celular('Redmi', 'Note 13 Pro+', 'Novo')
+celular_Samsung = Celular('Samsung Galaxy', 'A55', 'Novo')
 
+Celulares = [celular_iPhone, celular_Xiaomi, celular_Samsung]
 
-celular_iPhone.nome = 'iPhone'
-celular_iPhone.modelo = '13 Mini'
-
-Celulares = [celular_iPhone, celular_Xiaomi]
-
-print(Celulares, \n)
-print(celular_iPhone , \n)
-print(dir(celular_iPhone))
+print(celular_iPhone)
+print(celular_Samsung)
+print(celular_Xiaomi)
